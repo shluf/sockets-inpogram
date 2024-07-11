@@ -3,9 +3,10 @@ const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http, {
     cors: {
-        origin: "https://inpogram.share.zrok.io", // Izinkan semua origin
+        //origin: "https://inpogram.share.zrok.io",
+        origin: "*",
         methods: ["GET", "POST"],
-        credentials: true
+        // credentials: true
     }
 });
 const cors = require('cors');
@@ -32,8 +33,8 @@ io.on('connection', (socket) => {
     })
 });
 
-app.listen(port, () => {
+//app.listen(port, () => {
 	http.listen(port, () => {
 		console.log(`WebSocket server running on port ${port}`);
 	})
-}
+//})

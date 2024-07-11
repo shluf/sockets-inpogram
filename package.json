@@ -4,7 +4,6 @@
   "main": "sockets.js",
   "scripts": {
 "start": "node sockets.js"
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shluf",
   "license": "ISC",

@@ -3,10 +3,11 @@ const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http, {
     cors: {
-        //origin: "https://inpogram.share.zrok.io",
-        origin: "*",
+        // origin: "https://inpogram.share.zrok.io",
+        // origin: "*",
+origin: "http://localhost",
         methods: ["GET", "POST"],
-        // credentials: true
+        credentials: true
     }
 });
 const cors = require('cors');

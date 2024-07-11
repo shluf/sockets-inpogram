@@ -61,7 +61,7 @@ if (cluster.isMaster) {
         })
     });
 
-    http.listen(3000, () => {
-        console.log('WebSocket server running on port 3000');
+    http.listen(port, () => {
+        console.log(`WebSocket server running on port ${3000}`);
     });
 }

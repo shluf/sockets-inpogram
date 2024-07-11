@@ -5,7 +5,7 @@
 			"src": "sockets.js",
 			"use": "@vercel/node"
 		 }
-	 ]
+	 ],
 	"routes": [
 	 {
 			"src": "/(.*)",

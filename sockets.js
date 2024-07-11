@@ -8,6 +8,8 @@ const io = require('socket.io')(http, {
     }
 });
 const cors = require('cors');
+const port = process.env.PORT || 3000
+
 
 app.use(cors());
 
@@ -29,6 +31,8 @@ io.on('connection', (socket) => {
     })
 });
 
-http.listen(3000, () => {
-    console.log('WebSocket server running on port 3000');
-});
+app.listen(port, () => {
+	http.listen(port, () => {
+		console.log(`WebSocket server running on port ${port}`);
+	})
+}
